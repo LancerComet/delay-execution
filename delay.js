@@ -21,5 +21,5 @@ Delay.prototype.done = function (callback) {
 
 Delay.prototype.next = function () {
     this._delay.funcs.shift();
-    if (this._delay.funcs.length < 1) this._delay.doneCallback();
+    this._delay.funcs.length < 1 && this._delay.doneCallback();
 };
